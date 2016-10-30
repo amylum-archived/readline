@@ -5,7 +5,7 @@ item do
     url_xpath
     url 'http://git.savannah.gnu.org/cgit/readline.git/refs/tags'
     xpath '//*[@id="cgit"]/div/table/tr[2]/td[1]/a'
-    regex /^inetutils-([.\d]+)/
+    regex /^readline-([.\d]+)/
   end
 
   actual do
