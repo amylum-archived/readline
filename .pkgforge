@@ -1,0 +1,25 @@
+name 'readline'
+org 'amylum'
+
+licenses 'COPYING'
+
+deps(
+  ncurses: '6.0-3'
+)
+
+configure_flags(
+  prefix: '/usr'
+)
+
+cflags
+harden
+
+build do
+  configure
+  make
+  install
+end
+
+test do
+  # TODO: add tests
+end

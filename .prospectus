@@ -1,0 +1,33 @@
+Prospectus.extra_dep('file', 'pkgforge')
+
+item do
+  expected do
+    url_xpath
+    url 'http://git.savannah.gnu.org/cgit/readline.git/refs/tags'
+    xpath '//*[@id="cgit"]/div/table/tr[2]/td[1]/a'
+    regex /^inetutils-([.\d]+)/
+  end
+
+  actual do
+    git_tag
+    regex /^(.*)-\d+$/
+  end
+
+  deps do
+    PkgForge.load_from_file.deps.each do |dep_name, current_version|
+      item do
+        name dep_name
+
+        expected do
+          github_release
+          repo "amylum/#{dep_name}"
+        end
+
+        actual do
+          static
+          set current_version
+        end
+      end
+    end
+  end
+end
