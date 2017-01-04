@@ -4,7 +4,7 @@ org 'amylum'
 licenses 'COPYING'
 
 deps(
-  ncurses: '6.0-20161224-1'
+  ncurses: '6.0-20161231-1'
 )
 
 configure_flags(
