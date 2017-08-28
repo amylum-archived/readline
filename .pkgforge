@@ -4,7 +4,10 @@ org 'amylum'
 licenses 'COPYING'
 
 deps(
-  ncurses: '6.0-20170827-1'
+  ncurses: {
+    version: '6.0-20170827-1',
+    checksum: '3ae94c220d9a31c72ea6ba03afde6e7081c028fc039216201e7a744995e1d1c3'
+  }
 )
 
 configure_flags(
