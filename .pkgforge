@@ -5,8 +5,8 @@ licenses 'COPYING'
 
 deps(
   ncurses: {
-    version: '6.0-20170827-1',
-    checksum: '3ae94c220d9a31c72ea6ba03afde6e7081c028fc039216201e7a744995e1d1c3'
+    version: '6.0-20170902-1',
+    checksum: '541376efc4c59c9c9d89658822e9bc3fb932c192a967217ca01d463fc9482c0e'
   }
 )
 
