@@ -7,9 +7,10 @@ my_slug = pkgforge.org + '/' + pkgforge.name
 item do
   expected do
     url_xpath
-    url 'http://git.savannah.gnu.org/cgit/readline.git/refs/tags'
-    xpath '//*[@id="cgit"]/div/table/tr[2]/td[1]/a'
-    regex /^readline-([.\d]+)/
+    url 'http://git.savannah.gnu.org/cgit/readline.git/log/'
+    xpath '//*[@id="cgit"]/div/table/tr[2]/td[2]/a[1]'
+    #regex /Bash-([\d.]+) distribution sources and documentation/
+    regex /Readline-([\d.]+) patch (\d+)/, '\1p\2'
   end
 
   actual do
