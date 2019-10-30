@@ -9,8 +9,8 @@ item do
     url_xpath
     url 'http://git.savannah.gnu.org/cgit/readline.git/log/'
     xpath '//*[@id="cgit"]/div/table/tr[2]/td[2]/a[1]'
-    regex /^[rR]eadline-([\d.]+) distribution sources and documentation$/
-    #regex /[rR]eadline-([\d.]+) patch (\d+)/, '\1p\2'
+    #regex /^[rR]eadline-([\d.]+) distribution sources and documentation$/
+    regex /[rR]eadline-([\d.]+) patch (\d+)/, '\1p\2'
   end
 
   actual do
